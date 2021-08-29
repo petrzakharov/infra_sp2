@@ -7,17 +7,17 @@
 ## Начало работы
 
 0. Убедитесь, что у вас установлен и запущен Docker
-    % docker run ?????
+    * % docker run ?????
 1. Загрузите кастомный образ из docker hub с помощью команды:
-    % docker pull zakharovp/yamdb:v.1
+    * % docker pull zakharovp/yamdb:v.1
 Или же соберите образ с помощью инструкций, размещенных в Dockerfile:
-    % docker build -t yamdb:v.1 .
+    * % docker build -t yamdb:v.1 .
 2. Собрать из образов контейнеры, которые описаны в файле конфига docker-compose.yaml.
 В результате будут загружены еще 2 образа postgres:12.4 и nginx:1.19.3,
 будут определены директории для хранения данных и прописан роутинг портов:
-    % docker-compose up -d --build
+    * % docker-compose up -d --build
 3. Чтобы увидеть какие контейнеры в результате были запущены, наберите:
-    docker ps
+    * % docker ps
 
 ## Настройка приложения
 
@@ -33,16 +33,16 @@
 ### Другие полезные команды
 
 1. Остановка контейнеры
-    % docker stop container_id
+    * % docker stop container_id
 2. Удаление контейнера:
-    % docker rm container_id
+    * % docker rm container_id
 3. Остановка + отключения контейнера:
-    % rm -f container_id
+    * % rm -f container_id
 4. Посмотреть сохраненные образы:
-    % docker image ls
+    * % docker image ls
 5. Загрузить кастомный контейнер в Doker Hub (чтобы предоставить доступ):
-    % docker push docker_id/proj_name:tag
+    * % docker push docker_id/proj_name:tag
 6. Скачать кастомный контейнер из Docker Hub
-    % docker pull docker_id/proj_name:tag
+    * % docker pull docker_id/proj_name:tag
 7. Остановить работу всех контейнеров
-    % docker-compose down
+    * % docker-compose down
