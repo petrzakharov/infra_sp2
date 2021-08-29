@@ -22,12 +22,14 @@
 ## Настройка приложения
 
 Приложение стартовало в 3х контейнерах, теперь необходимо произвести миграции, создать суперпользователя(чтобы залогиниться, собрать статику и импортировать тестовые данные)
-Эти команды мы будем выполнять из контейнера web (контейнер с Django приложением):
-    % docker-compose exec web python manage.py makemigrations --noinput
-    % docker-compose exec web python manage.py migrate --noinput
-    % docker-compose exec web python manage.py createsuperuser
-    % docker-compose exec web python manage.py collectstatic --no-input 
-    % docker-compose exec web python manage.py dumpdata --exclude auth.permission --exclude contenttypes --indent 2 > fixtures.json
+
+### Эти команды мы будем выполнять из контейнера web (контейнер с Django приложением)
+
+* % docker-compose exec web python manage.py makemigrations --noinput
+* % docker-compose exec web python manage.py migrate --noinput
+* % docker-compose exec web python manage.py createsuperuser
+* % docker-compose exec web python manage.py collectstatic --no-input 
+* % docker-compose exec web python manage.py loaddata fixtures.json
 Готово, можно перейти по адресу http://127.0.0.1/admin/ и залогиниться.
 
 ### Другие полезные команды
