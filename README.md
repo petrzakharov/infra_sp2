@@ -28,9 +28,9 @@
 * % docker-compose exec web python manage.py makemigrations --noinput
 * % docker-compose exec web python manage.py migrate --noinput
 * % docker-compose exec web python manage.py createsuperuser
-* % docker-compose exec web python manage.py collectstatic --no-input 
+* % docker-compose exec web python manage.py collectstatic --no-input
 * % docker-compose exec web python manage.py loaddata fixtures.json
-Готово, можно перейти по адресу http://127.0.0.1/admin/ и залогиниться.
+Готово, можно перейти по адресу <http://127.0.0.1/admin/> и залогиниться.
 
 ### Другие полезные команды
 
